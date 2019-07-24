@@ -1,0 +1,76 @@
+// Typography declaration
+
+body {
+  font-family: $Oswald-Regular;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text--default;
+}
+
+h1 {
+  font-family: $segoe--bold;
+  font-weight: $bold;
+  font-size: 3.5em;
+  line-height: 1.2em;
+  margin: 0 0 .3em 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: $Oswald-Light;
+  font-weight: $normal;
+  font-size: 2.75em;
+  line-height: 1.2em;
+  margin: 0 0 .3em 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: $Oswald-SemiBold;
+  font-weight: $semi-bold;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0 0 .3em 0;
+  padding: 0;
+}
+
+h4 {
+  font-family: $Oswald-ExtraLight;
+  font-weight: $normal;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: $segoe;
+  font-weight: $normal;
+  font-size: 1em;
+  margin: 0 0 .3em 0;
+  padding: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-family: $segoe--semi;
+  font-weight: $semi-bold;
+}
+
+a {
+  font-family: $segoe--semi;
+  font-weight: $semi-bold;
+  font-size: 1em;
+}
+
+// Custom highlight state
+::selection {
+  background: $bg--blue; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: $bg--blue; /* Gecko Browsers */
+  color: #fff;
+}

@@ -1,0 +1,351 @@
+// Margin
+.mAuto{
+    @include margin(all, auto);
+}
+.mTop10{
+    @include margin(top, 10px);
+}
+.mTop5{
+    @include margin(top, 5px);
+}
+.mBtm10{
+    @include margin(bottom, 10px);
+}
+.mBtm5{
+    @include margin(bottom, 5px);
+}
+.mTop20{
+    @include margin(top, 20px);
+}
+.m0{
+   margin: 0px !important;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.ml15{
+    @include margin(left, 15px !important);
+}
+.ml10{
+    @include margin(left, 10px !important);
+}
+.ml20{
+    @include margin(left, 20px !important);
+}
+.mR20{
+    @include margin(right, 20px !important);
+}
+.mTop50{
+    @include margin(top, 50px !important);
+}
+.mTB5{
+    @include margin(all,5px 0 !important);
+}
+.mCust{
+    margin: 0px 5px -4px 20px;
+}
+.m10{
+    @include margin(all, 10px);
+}
+.mLT15 {
+    @include margin(all, 0px 15px !important);
+}
+.mTLR25{
+    @include margin(all, 10px 35px 0px 35px !important);
+}
+.mTLR35{
+    @include margin(all, 4px 35px 0px 35px !important);
+}
+.mLR35{
+    @include margin(all,0 35px !important);
+}
+.mLR25{
+    @include margin(all,0 25px !important);
+}
+.mLR10{
+    @include margin(all,0 10px !important);
+}
+.mLR20{
+    @include margin(all,0 20px !important);
+}
+
+// Padding
+
+.paddTB5{
+    @include padding(all, 5px 0);
+}
+.paddT15{
+    @include padding(top, 20px);
+}
+.paddLR3{
+    @include padding(all,0 3px);
+}
+.paddLR5{
+    @include padding(all,0 5px);
+}
+.paddA3{
+    @include padding(all, 3px);
+}
+.paddA5{
+    @include padding(all, 5px);
+}
+.paddTB10{
+    @include padding(all, 10px 0);
+}
+.paddTB20{
+    @include padding(all, 20px 0);
+}
+.paddA10{
+    @include padding(all, 10px);
+}
+.paddT510{
+    @include padding(all,5px 10px);
+}
+.padd0{
+    padding: 0 !important;
+}
+.paddLR20{
+    @include padding(all,0 20px);
+}
+.paddL10{
+    @include padding(left, 10px);
+}
+.paddL70{
+    @include padding(left, 70px);
+}
+.paddR5{
+     @include padding(right, 5px);
+}
+.paddR10{
+     @include padding(right, 5px);
+}
+.paddL30{
+     @include padding(left, 30px);
+}
+.paddL20{
+     @include padding(left, 20px);
+}
+.paddT10{
+     @include padding(top, 10px);
+}
+.paddL37{
+     @include padding(left, 37px);
+}
+.paddL5{
+     @include padding(left, 5px);
+}
+.paddLR15 {
+    padding: 0px 15px !important;
+}
+.paddB10{
+     @include padding(bottom, 10px);
+}
+.paddB6{
+     @include padding(bottom, 6px);
+}
+.paddB46{
+     @include padding(bottom, 60px);
+}
+.paddB39{
+     @include padding(bottom, 39px);
+}
+.paddA424{
+    @include padding(all, 4px 24px 4px 24px);
+}
+.paddLR10{
+    @include padding(all,0 10px);
+}
+.paddLR30{
+    @include padding(all,0 30px);
+}
+// Common fontsize
+
+.f-12{
+    font-size: 12px;
+}
+.f-20{
+    font-size: 20px;
+}
+.f-18{
+    font-size: 18px;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-13 {
+    font-size: 13px;
+}
+.f-11{
+    font-size: 11px;
+}
+.f-10{
+    font-size: 10px;
+}
+.f-50pt{
+    font-size: 50pt;
+}
+.f-7{
+    font-size: 7px;
+}
+
+.f-w6{
+    font-weight: 600;
+}
+.f-bold{
+    font-weight:bold;
+}
+.f-8rem{
+    font-size: 10rem;
+
+}
+.f-5rem {
+    font-size: 2rem;
+}
+.f-3rem{
+    font-size: 3.5rem
+}
+.f-2rem {
+    font-size: 2rem;
+}
+.f-1rem {
+    font-size: 1rem;
+}
+
+// Text Align
+
+.txt-center{
+    text-align: center;
+}
+.txt-left{
+    text-align: left;
+}
+.txt-right{
+    text-align: right;
+}
+.just-content-right{
+    @include justify-content(flex-end)
+}
+.align-self-center{
+    @include align-self(center)
+}
+
+// .align-items{align-items: center;}
+
+
+
+// Display prop
+
+.dBlk{
+    display: block;
+}
+.dInBlk{
+    display: inline-block;
+}
+.dNone{
+    display: None;
+}
+
+.h100{
+    height:100%;
+}
+
+.h100vh {
+    height: 100vh;
+}
+.w-100{
+    width:100%
+}
+.w-imp-7{
+    width:7px !important;
+}
+.w-imp-10{
+    width:10px !important;
+}
+.w-imp-20{
+    width:20px !important;
+}
+.w-imp-15{
+    width: 15px !important;
+}
+.w-imp-17{
+    width: 17px !important;
+}
+.w-imp-25{
+    width: 25px !important;
+}
+.w-imp-30{
+    width: 30px !important;
+}
+.w-imp-35{
+    width: 35px !important;
+}
+// Vertical Align
+
+.v-m{
+    vertical-align: middle;
+}
+.v-sub{
+    vertical-align: sub;
+}
+
+.alignCenter{
+    @include align-items(center);
+}
+
+.pad-top40 {
+    padding-top: 40px;
+}
+
+//Position
+.pos--rel{
+    position: relative;
+}
+
+.tilteffect {
+    transition: transform 1s;
+    transition-timing-function: linear;
+    animation: hpbanner 6s infinite;
+    }
+
+.aligncontentright {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(flex-end);
+}
+
+.aligncontentleft {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+}
+
+.aligncontentcenter {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+}
+
+.bg-image {
+    background-image: linear-gradient(#01a38d, #2cb8e7);
+}
+.tilteffect {
+transition: transform 1s;
+transition-timing-function: linear;
+animation: fpBanner 10s infinite;
+}
+
+.fromTopanim {
+    animation-name: landingSlideDown;
+          animation-duration: 2s;
+          position: relative;
+    }
+
+
+    .fromBottomanim {
+        animation-name: landingSlideUp;
+          animation-duration: 2s;
+          position: relative;
+    }

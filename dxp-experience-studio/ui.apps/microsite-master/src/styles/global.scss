@@ -1,0 +1,75 @@
+// All imported SCSS partials
+
+@import "./partials/_reset";      // Normalize
+@import "./partials/_mixins";     // Custom mixins to assist in development
+@import "./partials/_grid";       // This is a modified version of the Bootstrap grid to account for MWF breakpoints and
+@import "./partials/_fonts";      // Decalaring fonts per MWF guidelines
+@import "./partials/_variables";  // Declare global variables here
+@import "./partials/_typography"; // Declaring all typography
+@import "./Banner.scss";
+
+
+// Header 
+body {
+    overflow: hidden;
+  }
+
+.navbar-container{
+    &__content{
+        ul li{
+            @include inline-flex;
+        }
+        
+    }
+}
+
+.f-12{
+    font-size: 12px;
+}
+.f-20{
+    font-size: 20px;
+}
+.f-18{
+    font-size: 18px;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.f-13 {
+    font-size: 13px;
+}
+.f-11{
+    font-size: 11px;
+}
+.f-10{
+    font-size: 10\px;
+}
+.f-7{
+    font-size: 7px;
+}
+.f-w6{
+    font-weight: 600;
+}
+.f-bold{
+    font-weight:bold;
+}
+// Text Align
+
+.txt-center{
+    text-align: center;
+}
+.txt-left{
+    text-align: left;
+}
+.txt-right{
+    text-align: right;
+}
+.just-content-right{
+    @include justify-content(flex-end)
+}
+.align-self-center{
+    @include align-self(center)
+}
