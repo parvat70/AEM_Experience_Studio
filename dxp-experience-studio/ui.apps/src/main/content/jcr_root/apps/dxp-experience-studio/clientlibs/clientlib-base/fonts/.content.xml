@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="fonts"/>
+    <Oswald-Bold.1735fe8e.ttf/>
+    <Oswald-Bold.a187fa60.woff2/>
+    <Oswald-Bold.a90db55d.woff/>
+    <Oswald-ExtraLight.045e4a37.woff/>
+    <Oswald-ExtraLight.7888f2c4.woff2/>
+    <Oswald-ExtraLight.7adb1792.ttf/>
+    <Oswald-Light.9fff0ced.woff2/>
+    <Oswald-Light.071ac441.woff/>
+    <Oswald-Light.ada9f9e5.ttf/>
+    <Oswald-Medium.2c2bd8ae.woff/>
+    <Oswald-Medium.04c79695.ttf/>
+    <Oswald-Medium.771927db.woff2/>
+    <Oswald-Regular.db3fd902.ttf/>
+</jcr:root>

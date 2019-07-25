@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-07-25T12:55:25.136+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/dxp-experience-studio/settings/wcm/templates/dxp-experience-studio-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Dxp Experience Studio"
+        sling:resourceType="dxp-experience-studio/components/structure/page">
+        <root
+            jcr:lastModified="{Date}2019-07-19T11:01:23.102+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <herobanner
+                jcr:created="{Date}2019-07-20T17:00:57.579+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:42:25.190+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/herobanner"
+                backgroundimage="/content/dam/dxp-experience-studio/image/ROD-Next-1300x585.jpg"
+                headertext="Right"
+                istilt="{Boolean}true"
+                panoramaspeed="{Double}160.0"
+                subheadertext="RoD NeXT -&#xd;&#xa;New and Exponential Technologies"
+                textalign="bottom-right"
+                zoomrange="{Double}1.3"
+                zoomspeed="{Double}1.0"/>
+            <herobanner_43070497
+                jcr:created="{Date}2019-07-22T09:45:03.296+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:40:16.682+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/herobanner"
+                backgroundimage="/content/dam/dxp-experience-studio/image/Zensar-Eon-01.765bd3e5.jpg"
+                headertext="Hero Banner Left"
+                istilt="{Boolean}true"
+                panoramaspeed="{Double}10.0"
+                subheadertext="hero banner"
+                textalign="bottom-left"
+                zoomrange="{Double}1.0"
+                zoomspeed="{Double}1.0"/>
+            <herobanner_903839783
+                jcr:created="{Date}2019-07-22T09:46:26.671+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:40:50.312+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/herobanner"
+                backgroundimage="/content/dam/dxp-experience-studio/image/slider_1.538aa6f7.gif"
+                headertext="Hero Banner Right"
+                istilt="{Boolean}true"
+                panoramaspeed="{Double}35.0"
+                subheadertext="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+                textalign="bottom-right"
+                zoomrange="{Double}1.5"
+                zoomspeed="{Double}1.2"/>
+            <imagewithtitle
+                jcr:created="{Date}2019-07-20T17:03:20.635+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:41:44.298+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/imagewithtitle"
+                backgroundimage="/content/dam/dxp-experience-studio/image/ROD-Next-1300x585.jpg"
+                headertext="Image Right"
+                subheadertext="DIGITAL SUPPLY CHAIN Seamless Omni-channel Customer Experience"
+                textalign="bottom-right"/>
+            <imagewithtitle_792756203
+                jcr:created="{Date}2019-07-22T09:52:05.581+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:42:52.602+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/imagewithtitle"
+                backgroundimage="/content/dam/dxp-experience-studio/image/slider_1.538aa6f7.gif"
+                headertext="Image Left"
+                subheadertext="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+                textalign="bottom-left"/>
+            <carousel
+                jcr:created="{Date}2019-07-22T12:12:17.571+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:44:21.857+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/carousel"
+                istilt="{Boolean}true"
+                zoomrange="{Double}1.2"
+                zoomspeed="{Double}1.0">
+                <imagecarousel jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        sliders="/content/dam/dxp-experience-studio/image/Zensar-Eon-01.765bd3e5.jpg"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        sliders="/content/dam/dxp-experience-studio/image/slider_1.538aa6f7.gif"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        sliders="/content/dam/dxp-experience-studio/image/ROD-Next-1300x585.jpg"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        sliders="/content/dam/dxp-experience-studio/image/slider_4.765bd3e5.jpg"/>
+                </imagecarousel>
+            </carousel>
+            <video
+                jcr:created="{Date}2019-07-23T11:41:19.293+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:48:09.919+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/video"
+                backgroundimage="/content/dam/dxp-experience-studio/play.svg"
+                backgroundvideo="/content/dam/dxp-experience-studio/Agua-natural.mp4"
+                description="This is single video component "
+                src="/content/dam/dxp-experience-studio/video/Agua-natural.mp4"
+                textalign="left"
+                title="Single Video"/>
+            <multivideo
+                jcr:created="{Date}2019-07-23T17:58:05.572+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:50:51.466+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/multivideo">
+                <multivideo jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        description="Description 1"
+                        src="/content/dam/dxp-experience-studio/video/Agua-natural.mp4"
+                        textalign="left"
+                        title="Title 1"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        description="Description2"
+                        src="/content/dam/dxp-experience-studio/video/Tropical.mp4"
+                        textalign="left"
+                        title="Title2"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        description="Description 3"
+                        src="/content/dam/dxp-experience-studio/video/forest.mp4"
+                        textalign="left"
+                        title="Title3"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        description="Description 4"
+                        src="/content/dam/dxp-experience-studio/video/Agua-natural.mp4"
+                        textalign="left"
+                        title="Title4"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        description="Description 5"
+                        src="/content/dam/dxp-experience-studio/video/Tropical.mp4"
+                        textalign="left"
+                        title="Title5"/>
+                </multivideo>
+            </multivideo>
+            <card
+                jcr:created="{Date}2019-07-23T22:26:09.543+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-23T22:51:26.435+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/card"
+                type="2"
+                variation="card--double card--solid">
+                <cards jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        description="desc"
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title1"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        description="desc"
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title2"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        description="desc3"
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title3"/>
+                </cards>
+            </card>
+            <cards
+                jcr:created="{Date}2019-07-24T11:24:59.565+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:51:47.089+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/cards"
+                type="3"
+                variation="card--double card--solid">
+                <cards jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/image/Zensar-Eon-01.765bd3e5.jpg"
+                        title="card1"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/image/slider_4.765bd3e5.jpg"
+                        title="card 2"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/image/slider_4.765bd3e5.jpg"
+                        title="card 3"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/image/Zensar-Eon-01.765bd3e5.jpg"
+                        title="card 4"/>
+                </cards>
+            </cards>
+            <partners
+                jcr:created="{Date}2019-07-24T15:40:29.468+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:54:46.305+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/partners"
+                backgroundImage="/content/dam/dxp-experience-studio/slider_4.765bd3e5.jpg"
+                content="hsgdhsdgshhshshf"
+                title="title">
+                <partners jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner1"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner2"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner3"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner 4"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner 5"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner 6"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner 7"/>
+                    <item7
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partner 8"/>
+                    <item8
+                        jcr:primaryType="nt:unstructured"
+                        image="/content/dam/dxp-experience-studio/image/cisco.png"
+                        name="Partners9"/>
+                </partners>
+            </partners>
+            <threedcards
+                jcr:created="{Date}2019-07-25T12:14:22.066+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-25T12:55:25.117+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="dxp-experience-studio/components/content/threedcards"
+                type="3">
+                <threedcards jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title0"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title1"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="TItle2"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title3"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title4"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        description="wereeeem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="/content/dam/dxp-experience-studio/Zensar-Eon-01.765bd3e5.jpg"
+                        title="Title5"/>
+                </threedcards>
+            </threedcards>
+        </root>
+    </jcr:content>
+</jcr:root>

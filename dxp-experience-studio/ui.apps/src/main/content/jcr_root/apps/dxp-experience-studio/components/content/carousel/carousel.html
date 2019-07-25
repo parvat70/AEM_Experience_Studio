@@ -1,0 +1,14 @@
+ <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !zoomrange, classAppend='cmp-carasoul'}">
+</sly>
+
+
+<sly data-sly-use.carouselItems="com.dxp.experience.studio.core.models.CarouselModel">
+<div class="pad-top40">
+<carousel :dataref='{ sliders: [${carouselItems.carouseljsonObject}],
+        zoomrange:"${properties.zoomrange}",
+        zoomspeed:"${properties.zoomspeed}",
+        istilt:"${properties.istilt}"
+    }' />
+ </div>
+</sly>

@@ -1,0 +1,8 @@
+ <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !src, classAppend='cmp-carasoul'}">
+</sly>
+
+<sly data-sly-use.multivideoobj="com.dxp.experience.studio.core.models.MultiVideoModel" data-sly-unwrap/>
+<div class="pad-top40">
+<multivideo :dataref="${multivideoobj.multiVideoJsonObject}" />
+ </div>

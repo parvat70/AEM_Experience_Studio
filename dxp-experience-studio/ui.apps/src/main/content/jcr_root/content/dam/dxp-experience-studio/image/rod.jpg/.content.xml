@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="c6342ca7-e2f8-4bc4-9e96-c337f34c4a7b">
+    <jcr:content
+        cq:name="7T9364v.538aa6f7.gif"
+        cq:parentPath="/content/dam/dxp-experience-studio"
+        dam:assetState="processed"
+        dam:copiedAt="{Date}2019-07-19T13:35:45.215+05:30"
+        dam:parentAssetID="3b9a1620-f889-4ec9-bc1c-2bc976eca520"
+        dam:relativePath="dxp-experience-studio/image/rod.jpg"
+        jcr:lastModified="{Date}2019-07-19T13:35:57.122+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2019-07-19T13:35:50.505+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="yes"
+            dam:sha1="70319e12a488c99a478152ca70f24b9ff8f5d793"
+            dam:size="{Long}169922"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2019-07-19T13:35:45.216+05:30"
+            jcr:lastModified="{Date}2019-07-19T13:35:45.215+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}585"
+            tiff:ImageWidth="{Long}1300"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

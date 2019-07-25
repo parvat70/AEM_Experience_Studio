@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Content-Package-Id: my_packages:experience_studio_25_July:1.5
+Content-Package-Roots: /apps/dxp-experience-studio,/content/dam/dxp-ex
+ perience-studio,/content/dxp-experience-studio,/conf/dxp-experience-s
+ tudio
+Content-Package-Type: mixed
+

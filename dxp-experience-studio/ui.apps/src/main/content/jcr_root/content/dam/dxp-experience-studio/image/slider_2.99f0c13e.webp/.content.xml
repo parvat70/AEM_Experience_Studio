@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f0ab6934-c561-405a-afb9-b759b2126fa9">
+    <jcr:content
+        dam:assetState="processed"
+        dam:copiedAt="{Date}2019-07-25T12:23:47.583+05:30"
+        dam:parentAssetID="52b4b0d6-d0d2-4579-829d-bbd76d9d1e29"
+        dam:relativePath="dxp-experience-studio/image/slider_2.99f0c13e.webp"
+        jcr:lastModified="{Date}2019-07-25T12:23:48.713+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2019-07-19T11:59:18.968+05:30"
+            dam:sha1="1f42cb77d5d40dbbaddeeff8ced72f3f3cfd85b1"
+            dam:size="{Long}752382"
+            dc:format="image/webp"
+            dc:modified="{Date}2019-07-25T12:23:47.401+05:30"
+            jcr:lastModified="{Date}2019-07-25T12:23:47.400+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

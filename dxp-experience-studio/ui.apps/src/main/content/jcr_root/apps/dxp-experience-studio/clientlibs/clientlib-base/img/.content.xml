@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <logo.82b9c7a5.png/>
+    <Zensar-Eon-01.765bd3e5.jpg/>
+    <slider_4.765bd3e5.jpg/>
+    <slider_2.99f0c13e.webp/>
+    <slider_3.6b892c6d.jpeg/>
+    <_x0037_T9364v.538aa6f71.gif/>
+    <slider_1.538aa6f7.gif/>
+    <_x0037_T9364v.538aa6f7.gif/>
+    <th.jpg/>
+    <asset.jpg/>
+    <play.svg/>
+</jcr:root>

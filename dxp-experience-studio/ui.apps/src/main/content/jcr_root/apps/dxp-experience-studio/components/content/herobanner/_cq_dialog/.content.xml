@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Hero Banner"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_4_docs_component_en#Title">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Please Provide Header Text"
+                        fieldLabel="Title"
+                        name="./headertext"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldDescription="Please Provide Description"
+                        fieldLabel="Description"
+                        name="./subheadertext"/>
+                    <imagePath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldDescription="Please Provide Image Path"
+                        fieldLabel="Image Path"
+                        name="./backgroundimage"
+                        rootPath="/content/dam/dxp-experience-studio"/>
+                    <istilt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        fieldDescription="Please Select Tilt Value "
+                        fieldLabel="select tilt value"
+                        name="./istilt"
+                        text="IsTilt"
+                        value="true"/>
+                    <textalign
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        defaultValue="bottom-left"
+                        fieldDescription="Select Text Alignment"
+                        fieldLabel="Select Text Alignment"
+                        name="./textalign">
+                        <items jcr:primaryType="nt:unstructured">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                defaultValue="bottom-left"
+                                text="Left"
+                                value="bottom-left"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="center-center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                defaultValue="bottom-left"
+                                text="Right"
+                                value="bottom-right"/>
+                        </items>
+                    </textalign>
+                    <istilttype
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                        name="./istilt@TypeHint"
+                        value="Boolean"/>
+                    <iszoompanorama
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        fieldDescription="Please Provide Zoom Panorama"
+                        fieldLabel="select iszoompanorama"
+                        name="./iszoompanorama"
+                        text="IsZoomPanorama"
+                        value="true"/>
+                    <iszoompanoramatype
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                        name="./iszoompanorama@TypeHint"
+                        value="Boolean"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
