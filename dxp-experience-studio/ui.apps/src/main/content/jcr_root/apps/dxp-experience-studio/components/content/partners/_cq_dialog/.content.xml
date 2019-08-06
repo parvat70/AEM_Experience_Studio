@@ -34,6 +34,7 @@
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldDescription="Name"
                                             fieldLabel="Name"
+                                            maxlength="{Long}20"
                                             name="./name"/>
                                         <image
                                             jcr:primaryType="nt:unstructured"
@@ -58,6 +59,7 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                         fieldDescription="Please Provide Description"
                         fieldLabel="Description"
+                        maxlength="{Long}100"
                         name="./content"/>
                     <backgroundimage
                         jcr:primaryType="nt:unstructured"

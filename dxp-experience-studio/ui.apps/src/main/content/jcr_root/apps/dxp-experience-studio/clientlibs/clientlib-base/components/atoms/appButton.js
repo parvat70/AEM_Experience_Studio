@@ -1,4 +1,4 @@
-const AppButton = Vue.component("app-button", {
+var AppButton = Vue.component("app-button", {
     name: 'AppButton',
     template: `<button :class="shape">
     {{label}}</button>`,

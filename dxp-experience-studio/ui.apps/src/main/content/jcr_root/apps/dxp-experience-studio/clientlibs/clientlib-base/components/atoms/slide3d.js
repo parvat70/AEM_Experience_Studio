@@ -1,4 +1,4 @@
-const slide3d = Vue.component('slide3d', {
+var slide3d = Vue.component('slide3d', {
     name: 'slide3d',
     template: `<div class="carousel-3d-slide" :style="slideStyle" :class="computedClasses" @click="goTo()">
 		<slot :index="index" :isCurrent="isCurrent" :leftIndex="leftIndex" :rightIndex="rightIndex"/>
@@ -43,14 +43,16 @@ const slide3d = Vue.component('slide3d', {
                     }
                 }
             }
-            var widthMinus = 370 * (this.leftIndex >= 0 ? this.leftIndex + 1 : this.rightIndex >= 0 ? this.rightIndex + 1 : 0)
-            var width = this.parent.slideWidth - widthMinus;
-            var left = (370 * (this.rightIndex >= 0 ? this.rightIndex + 1 : 0))
+            var widthMinus = 370 * (this.leftIndex >= 0 ? this.leftIndex + 1 : this.rightIndex >= 0 ? this.rightIndex + 1 : 0);
+                widthMinus = window.innerWidth <= 540 ? window.innerWidth/3 : widthMinus;
+            var width = window.innerWidth <= 540 ? 300 : this.parent.slideWidth - widthMinus;
+            var left = (370 * (this.rightIndex >= 0 ? this.rightIndex + 1 : 0));
+                left = window.innerWidth <= 540 ? 0 : left;
+
             return Object.assign(styles, {
                 'border-width': this.parent.border + 'px',
                 'width': (width > 200 ? width : 400) + 'px',
                 left: (width > 200 ? left : (left == 0 ? 0 : 490)) + "px",
-                'height': (this.parent.slideHeight - 150 * (this.leftIndex >= 0 ? this.leftIndex + 1 : this.rightIndex >= 0 ? this.rightIndex + 1 : 0)) + 'px',
                 'transition': ' transform ' + this.parent.animationSpeed + 'ms, ' +
                     '               opacity ' + this.parent.animationSpeed + 'ms, ' +
                     '               visibility ' + this.parent.animationSpeed + 'ms'
@@ -92,7 +94,7 @@ const slide3d = Vue.component('slide3d', {
             const top = this.parent.space === 'auto' ? 0 : '-' + (parseInt((i + 1) * (this.parent.space)) + "px");
             return {
                 transform: transform,
-                top: top,
+                top:  window.innerWidth <= 540 ? 0 : top,
                 zIndex: zIndex - (Math.abs(i) + 1)
             }
         },

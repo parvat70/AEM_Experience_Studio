@@ -1,0 +1,5 @@
+<sly data-sly-use.headerObj="com.dxp.experience.studio.core.models.HeaderModel" data-sly-unwrap>
+<div class="MainHeader">
+<navigation :dataref='{selectedMenu:${headerObj.getHeaderItems}}' />
+</div>
+</sly>

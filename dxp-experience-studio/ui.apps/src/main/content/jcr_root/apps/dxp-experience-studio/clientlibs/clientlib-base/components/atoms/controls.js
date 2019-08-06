@@ -1,4 +1,4 @@
-const controls = Vue.component('controls', {
+var controls = Vue.component('controls', {
     name: 'controls',
     template: `<div class="carousel-3d-controls">
         <a href="#" class="prev" @click.prevent="parent.goPrev()"

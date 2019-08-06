@@ -1,7 +1,7 @@
-const staticimage = Vue.component('staticimage', {
+const staticimage = Vue.component("staticimage", {
   template: ` <div>
     <div class="fpbanner" ref="container" :style="{height:height + 'px'}" @mouseover="showOverLay()" @mouseleave="hideOverLay()" >
-    <div class="imgcontainer"  >
+    <div class="imgcontainer">
       <img
         :src="getImage(dataref.backgroundimage)"
         ref="fpbannerimg"
@@ -10,15 +10,15 @@ const staticimage = Vue.component('staticimage', {
        
       />
     </div>
-    <div class="row fpbanner__row" >
-    <div class="col-md-12" :class="dataref.textalign">
-      <div class="fpbanner__container pos--rel" >
-      <div class="fpbanner__layer" ref="overLay">
+    <div class="row fpbanner__row image_banner m-0" ref="overLay">
+    <div class="col-md-12 p-0" :class="dataref.textalign">
+      <div class="fpbanner__container pos--rel"  >
+      <div class="fpbanner__layer" >
         <h3 class="fpbanner--header f-3rem fromtopanim">
-          <span class="fpbanner--text m10">{{dataref.headertext}}</span>
+          <span class="fpbanner--text">{{dataref.headertext}}</span>
         </h3>
         <h2 class="fpbanner__subheader f-2rem frombottomanim">
-          <span class="fpbanner__subheader--text m10">{{dataref.subheadertext}}</span>
+          <span class="fpbanner__subheader--text">{{dataref.subheadertext}}</span>
         </h2>
         </div>
       </div>
@@ -30,7 +30,6 @@ const staticimage = Vue.component('staticimage', {
   data() {
     return {
       height: window.innerHeight
-
     };
   },
   props: {
@@ -41,21 +40,16 @@ const staticimage = Vue.component('staticimage', {
   },
   methods: {
     getImage(img) {
-      console.log(this.height);
+      // console.log(this.height);
       return img;
     },
     showOverLay() {
-      var overLay = this.$refs['overLay'];
-      overLay.style.background = 'rgba(0, 0, 0, 0.5)';
+      var overLay = this.$refs["overLay"];
+      overLay.classList.add("overlay");
     },
     hideOverLay() {
-      var overLay = this.$refs['overLay'];
-      overLay.style.background = 'none';
+      var overLay = this.$refs["overLay"];
+      overLay.classList.remove("overlay");
     }
   }
-
-
-
-
 });
-

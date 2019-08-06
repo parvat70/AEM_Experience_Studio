@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-07-25T12:55:25.136+05:30"
+        cq:lastModified="{Date}2019-07-25T14:39:15.558+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/dxp-experience-studio/settings/wcm/templates/dxp-experience-studio-template"
         jcr:primaryType="cq:PageContent"
@@ -16,12 +16,12 @@
             <herobanner
                 jcr:created="{Date}2019-07-20T17:00:57.579+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-07-25T12:42:25.190+05:30"
+                jcr:lastModified="{Date}2019-07-25T14:38:22.957+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dxp-experience-studio/components/content/herobanner"
                 backgroundimage="/content/dam/dxp-experience-studio/image/ROD-Next-1300x585.jpg"
-                headertext="Right"
+                headertext="Right "
                 istilt="{Boolean}true"
                 panoramaspeed="{Double}160.0"
                 subheadertext="RoD NeXT -&#xd;&#xa;New and Exponential Technologies"
@@ -46,12 +46,12 @@
             <herobanner_903839783
                 jcr:created="{Date}2019-07-22T09:46:26.671+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2019-07-25T12:40:50.312+05:30"
+                jcr:lastModified="{Date}2019-07-25T14:39:15.542+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="dxp-experience-studio/components/content/herobanner"
                 backgroundimage="/content/dam/dxp-experience-studio/image/slider_1.538aa6f7.gif"
-                headertext="Hero Banner Right"
+                headertext="Hero Banner  Right"
                 istilt="{Boolean}true"
                 panoramaspeed="{Double}35.0"
                 subheadertext="Lorem Ipsum is simply dummy text of the printing and typesetting industry"

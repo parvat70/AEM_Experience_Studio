@@ -1,13 +1,14 @@
-const singlevideo = Vue.component('singlevideo', {
-  template: ` <div class="single-video-container">
+var singlevideo = Vue.component('singlevideo', {
+  template: ` <div class="single-video-container single_video_voice">
     <img
       id="play-icon-full-video"
       ref="play-icon-full-video"
       class="play-icon"
       @click="playVideoOnClick()"
-      src="/apps/dxp-experience-studio/clientlibs/clientlib-base/img/play.svg"
+      src="/apps/dxp-experience-studio/clientlibs/clientlib-base/resources/img/play.png"
     />
     <video
+      class="single-video"
       id="full-video"
       ref="full-video"
       width="100%"

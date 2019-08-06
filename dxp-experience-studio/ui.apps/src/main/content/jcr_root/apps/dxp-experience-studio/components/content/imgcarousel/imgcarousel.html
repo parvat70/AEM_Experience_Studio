@@ -1,0 +1,14 @@
+ <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !textalign}">
+</sly>
+<sly data-sly-use.carouselObj="com.dxp.experience.studio.core.models.CarouselModel">
+<div class="pad-top40">
+<carousel :dataref='{sliders: 
+        ${carouselObj.getCarouseljsonObject},
+        zoomrange:1.2,
+        zoomspeed:1,
+        istilt:"${properties.istilt}",
+        textalign:"${properties.textalign}"
+    }' />
+ </div>
+</sly>

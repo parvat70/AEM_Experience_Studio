@@ -1,11 +1,11 @@
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-      data-sly-call="${templates.placeholder @ isEmpty = !variation, classAppend='cmp-carasoul'}">
+      data-sly-call="${templates.placeholder @ isEmpty = !variation}">
 </sly>
 <sly data-sly-use.threedcardobj="com.dxp.experience.studio.core.models.ThreeDCardModel" data-sly-unwrap>
 <div class="pad-top40">
             <threed-slider :dataref='{cards:${threedcardobj.threeDCardJson},
-                variation: "${threedcardobj.threeDCardVariation}",
-                type:${properties.type}
+                variation: "${properties.variation}",
+                type:3
                 }' />
         </div>
  </sly>

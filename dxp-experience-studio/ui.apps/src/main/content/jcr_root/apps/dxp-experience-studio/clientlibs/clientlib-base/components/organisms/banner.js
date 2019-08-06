@@ -1,4 +1,4 @@
-var banner = Vue.component('banner', {
+var banner = Vue.component("banner", {
   template: ` <div class>
   <div class="container-fluid fpbanner" ref="container" :style="{height:height + 'px'}" @mouseover="changeKeyFrames()">
     <div class="imgcontainer">
@@ -10,18 +10,21 @@ var banner = Vue.component('banner', {
         :style="{height:height + 'px'}"
       />
     </div>
-    <div class="row fpbanner__row">
-      <div class="col-md-12" :class="dataref.textalign">
+    <div class="row fpbanner__row m-0">
+      <div class="col-md-12 p-0" :class="dataref.textalign">
+      <div :class="dataref.overlayVariation">
         <div class="fpbanner__container pos--rel">
           <h3 class="fpbanner--header f-3rem fromtopanim">
-            <span class="fpbanner--text m10">{{dataref.headertext}}</span>
+            <span class="fpbanner--text">{{dataref.headertext}}</span>
           </h3>
           <h2 class="fpbanner__subheader f-2rem frombottomanim">
-            <span class="fpbanner__subheader--text m10">{{dataref.subheadertext}}</span>
+            <span class="fpbanner__subheader--text">{{dataref.subheadertext}}</span>
           </h2>
         </div>
       </div>
+      </div>
     </div>
+    
   </div>
 </div>`,
   data() {
@@ -63,12 +66,12 @@ var banner = Vue.component('banner', {
           clearInterval(timer);
           inner = this.$refs.fpbannerimg;
           toggleSwitch = true;
-          inner.style.transition = '';
-          inner.style.transform = '';
-          inner.style.webkitTransform = '';
-          inner.style.mozTranform = '';
-          inner.style.msTransform = '';
-          inner.style.oTransform = '';
+          inner.style.transition = "";
+          inner.style.transform = "";
+          inner.style.webkitTransform = "";
+          inner.style.mozTranform = "";
+          inner.style.msTransform = "";
+          inner.style.oTransform = "";
         }
       }, 40);
     },
@@ -76,14 +79,14 @@ var banner = Vue.component('banner', {
       var container = this.$refs.container,
         inner = this.$refs.fpbannerimg;
 
-      var onMouseEnterHandler = function (event) {
+      var onMouseEnterHandler = function(event) {
         update(event);
       };
-      var update = function () {
+      var update = function() {
         updateTransformStyle(x, y);
       };
 
-      var updateTransformStyle = function (x, y) {
+      var updateTransformStyle = function(x, y) {
         var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
         inner.style.transform = style;
         inner.style.webkitTransform = style;
@@ -105,16 +108,16 @@ var banner = Vue.component('banner', {
         _y: 0,
         x: 0,
         y: 0,
-        updatePosition: function (event) {
+        updatePosition: function(event) {
           var e = event || window.event;
           this.x = e.clientX - this._x;
           this.y = (e.clientY - this._y) * -1;
         },
-        setOrigin: function (e) {
+        setOrigin: function(e) {
           this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
           this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
         },
-        show: function () {
+        show: function() {
           return "(" + this.x + ", " + this.y + ")";
         }
       };
@@ -126,21 +129,21 @@ var banner = Vue.component('banner', {
 
       var counter = 0;
       var refreshRate = 10;
-      var isTimeToUpdate = function () {
+      var isTimeToUpdate = function() {
         return counter++ % refreshRate === 0;
       };
 
       //----------------------------------------------------
 
-      var onMouseEnterHandler = function (event) {
+      var onMouseEnterHandler = function(event) {
         update(event);
       };
 
-      var onMouseLeaveHandler = function () {
+      var onMouseLeaveHandler = function() {
         //inner.style = "";
       };
 
-      var onMouseMoveHandler = function (event) {
+      var onMouseMoveHandler = function(event) {
         if (isTimeToUpdate()) {
           update(event);
         }
@@ -148,7 +151,7 @@ var banner = Vue.component('banner', {
 
       //----------------------------------------------------
 
-      var update = function (event) {
+      var update = function(event) {
         mouse.updatePosition(event);
         updateTransformStyle(
           (mouse.y / inner.offsetHeight / 2).toFixed(2),
@@ -156,7 +159,7 @@ var banner = Vue.component('banner', {
         );
       };
 
-      var updateTransformStyle = function (x, y) {
+      var updateTransformStyle = function(x, y) {
         var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
         inner.style.transform = style;
         inner.style.webkitTransform = style;
@@ -166,7 +169,8 @@ var banner = Vue.component('banner', {
         inner.style.webkitTransition = "-webkit-transform .5s !important";
         inner.style.transition = "-webkit-transform .5s !important";
         inner.style.transition = "transform .5s !important";
-        inner.style.transition = "transform .5s,-webkit-transform .5s !important";
+        inner.style.transition =
+          "transform .5s,-webkit-transform .5s !important";
       };
 
       //--------------------------------------------------------
@@ -243,7 +247,6 @@ var banner = Vue.component('banner', {
         }, 11000);
         setTimeout(() => {
           this.$refs.fpbannerimg.classList.remove("zoom-outeffect");
-
         }, 18000);
         // setTimeout(() => {
         //   this.$refs.fpbannerimg.classList.remove("zoom-outeffect");
@@ -299,10 +302,3 @@ var banner = Vue.component('banner', {
     }
   }
 });
-
-
-
-
-
-
-

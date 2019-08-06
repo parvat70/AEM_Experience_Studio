@@ -35,14 +35,6 @@
                         fieldLabel="Image Path"
                         name="./backgroundimage"
                         rootPath="/content/dam/dxp-experience-studio"/>
-                    <istilt
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                        fieldDescription="Please Select Tilt Value "
-                        fieldLabel="select tilt value"
-                        name="./istilt"
-                        text="IsTilt"
-                        value="true"/>
                     <textalign
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/select"
@@ -67,9 +59,18 @@
                                 value="bottom-right"/>
                         </items>
                     </textalign>
+                    <istitlt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Please Select Tilt Value "
+                        fieldLabel="select tilt value"
+                        name="./istilt"
+                        text="IsTilt"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true"/>
                     <istilttype
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                        sling:resourceType="granite/ui/components/coral/foundation/form//hidden"
                         name="./istilt@TypeHint"
                         value="Boolean"/>
                     <iszoompanorama
@@ -85,6 +86,35 @@
                         sling:resourceType="granite/ui/components/foundation/form/hidden"
                         name="./iszoompanorama@TypeHint"
                         value="Boolean"/>
+                    <overlayVariation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        fieldDescription="Select Overlay Variation"
+                        fieldLabel="Overlay Variation"
+                        name="./overlayVariation">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                text="select"
+                                value="select"/>
+                            <overlay1
+                                jcr:primaryType="nt:unstructured"
+                                text="fpbanner__overlay"
+                                value="fpbanner__overlay"/>
+                            <overlay2
+                                jcr:primaryType="nt:unstructured"
+                                text="fpbanner__overlay bottom--right"
+                                value="fpbanner__overlay bottom--right"/>
+                            <overlay3
+                                jcr:primaryType="nt:unstructured"
+                                text="fpbanner__overlay top--right"
+                                value="fpbanner__overlay top--right"/>
+                            <overlay4
+                                jcr:primaryType="nt:unstructured"
+                                text="fpbanner__overlay top--left"
+                                value="fpbanner__overlay top--left"/>
+                        </items>
+                    </overlayVariation>
                 </items>
             </column>
         </items>

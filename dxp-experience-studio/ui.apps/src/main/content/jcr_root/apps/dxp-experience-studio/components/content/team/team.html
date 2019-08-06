@@ -1,0 +1,27 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !heading }">
+</sly>
+
+<sly data-sly-use.teamDetails="com.dxp.experience.studio.core.models.TeamModel">
+<div>
+            <team :dataref='{
+                heading: "${properties.heading}",
+                description: "${properties.description}",
+                slides :${teamDetails.getTeamJsonObject},
+                flickityOptions: {
+                    initialIndex: 6,
+                    prevNextButtons: false,
+                    pageDots: true,
+                    wrapAround: true,
+                    pauseAutoPlayOnHover: true,
+                    selectedAttraction: 0.025,
+                    setGallerySize: false,
+                    dragThreshold: 7
+                },
+                carouselPos: 0,
+                activeIndex: 0,
+                isFirst: true,
+                currSlide: "Security"
+            }' />
+        </div>
+</sly>

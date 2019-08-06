@@ -53,20 +53,31 @@
                             </items>
                         </field>
                     </threedcards>
-                    <cardtype
+                    <variation
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/select"
-                        defaultValue="{Long}2"
-                        fieldDescription="Select Card Type"
-                        fieldLabel="Select Card Type"
-                        name="./type">
+                        fieldDescription="Select Overlay Variation"
+                        fieldLabel="Overlay Variation"
+                        name="./variation">
                         <items jcr:primaryType="nt:unstructured">
-                            <type3
+                            <variation1
                                 jcr:primaryType="nt:unstructured"
-                                text="3"
-                                value="{Long}3"/>
+                                text="Card Single"
+                                value="card--single"/>
+                            <variation2
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Single bottom Right"
+                                value="card--single bottom--right"/>
+                            <variation3
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Single Card Solid"
+                                value="card--single card--solid"/>
+                            <variation4
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Single Card Solid Bottom Right"
+                                value="card--single card--solid bottom--right"/>
                         </items>
-                    </cardtype>
+                    </variation>
                 </items>
             </column>
         </items>

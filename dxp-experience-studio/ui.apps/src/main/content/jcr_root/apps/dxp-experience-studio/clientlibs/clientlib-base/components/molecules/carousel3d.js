@@ -264,14 +264,14 @@ var carousel3d = Vue.component('carousel3d', {
             const diff2 = (diff < 0) ? -diff : diff
             let timeBuff = 0
             let i = 0
-            //this.goSlide(index);
-            while (i < diff2) {
-                i += 1
-                const timeout = (diff2 === 1) ? 0 : (timeBuff)
-                setTimeout(() => (diff < 0) ? this.goPrev(diff2) : this.goNext(diff2), timeout)
-                timeBuff += (this.animationSpeed / (diff2))
-                //timeBuff += this.animationSpeed
-            }
+            this.goSlide(index);
+            // while (i < diff2) {
+            //     i += 1
+            //     const timeout = (diff2 === 1) ? 0 : (timeBuff)
+            //     setTimeout(() => (diff < 0) ? this.goPrev(diff2) : this.goNext(diff2), timeout)
+            //     timeBuff += (this.animationSpeed / (diff2))
+            //     //timeBuff += this.animationSpeed
+            // }
         },
         /**
          * Trigger actions when animation ends

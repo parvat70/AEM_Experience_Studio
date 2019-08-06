@@ -1,0 +1,24 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-unwrap>
+    <sly data-sly-call="${clientlib.js @ categories='dxp-experience-studio.base'}" data-sly-unwrap/>
+</sly>
+ 
+<script>
+        window.onload = function () {
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                    'banner': banner,
+                    'staticimage': staticimage,
+                    'carousel': carousel,
+                    'app-card': AppCard,
+                    'partners':partners,
+                    'singlevideo': singlevideo,
+                    'multivideo': multivideo,
+                    'navigation': navigation,
+                    'threed-slider': threeDSlider,
+                    'multivideo2': multivideo2
+                },
+            })
+        }
+</script>

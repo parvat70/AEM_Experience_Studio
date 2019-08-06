@@ -1,5 +1,5 @@
 var carousel = Vue.component("carousel", {
-  template: `<div class=" hsbanner" ref="hsslidercontainer">
+  template: `<div class="hsbanner" :class="'hsbanner'+dataref.textalign" ref="hsslidercontainer" @mouseover="showOverLay()" @mouseleave="hideOverLay()">
 <b-carousel
   ref="hsbannersliderouter"
   class="hsbanner__carousel pos--rel"   
@@ -11,11 +11,31 @@ var carousel = Vue.component("carousel", {
 >
   <b-carousel-slide
     ref="hsbannercarousel"
-    class="hsbanner__carousel--item"
-    v-for="imgs in dataref.sliders"
-    :key="imgs"
+    class="hsbanner--carousel--item h-100"
+    v-for="sItem in dataref.sliders"
+    
+    :key="sItem.src"
+    
   >
-    <img :src="getImage(imgs)" slot="img" class="d-block img-fluid w-100" ref="hsbannerimg" :style="{height: height +'px'}" />
+    <img :src="getImage(sItem.src)" slot="img" class="hsbanner__carouselimage d-block" ref="hsbannerimg" />
+    <div class="hsbanner__carouselcontent" :class="dataref.textalign">
+     
+    <div class="col-md-12 ">
+    <div class="hsbanner__container pos--rel">
+    <div class="hsbanner__layer">
+    <h3 class="hsbanner--header f-3rem">
+    <span class="hsbanner--text m10">{{sItem.headertext!==undefined?sItem.headertext:""}}</span>
+    </h3> 
+    <h2 class="hsbanner__subheader f-2rem">
+    <span class="hsbanner__subheader--text m10">
+    {{sItem.subheadertext!==undefined?sItem.subheadertext:""}}
+    </span>
+    </h2>
+    </div>
+    </div>
+    </div>
+     
+    </div>
   </b-carousel-slide>
 </b-carousel>
 </div>`,
@@ -29,7 +49,28 @@ var carousel = Vue.component("carousel", {
     return {
       timerInterval: undefined,
       timerTimeout: [],
-      height: window.innerHeight
+      height: window.innerHeight,
+      sliders: [{
+          src: "img/slider_1.538aa6f7.gif",
+          headertext: "Lorum",
+          subheadertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          src: "img/slider_2.99f0c13e.webp",
+          headertext: "Lorum",
+          subheadertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          src: "img/slider_3.6b892c6d.jpeg",
+          headertext: "Lorum",
+          subheadertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          src: "img/slider_4.765bd3e5.jpg",
+          headertext: "Lorum",
+          subheadertext: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
     };
   },
   mounted() {
@@ -39,11 +80,29 @@ var carousel = Vue.component("carousel", {
     var prevBtn = document.querySelectorAll(".hsbanner .carousel-control-prev-icon")[0];
     prevBtn.classList.add("swiper-button-prev");
     prevBtn.classList.add("swiper-button-white");
+    this.setAlignText();
+
     this.zoomInOut();
     this.startTiltEffect();
   },
+
   methods: {
+
+    setAlignText() {
+      // console.log(document.querySelectorAll(".hsbanner__carousel .carousel-caption")[0]);
+      // document.querySelectorAll(".hsbanner__carousel .carousel-caption")[0].classList.add(this.dataref.textalign);
+    },
+    showOverLay() {
+      var overLay = document.querySelectorAll(".hsbanner__carousel .active .carousel-caption")[0];
+      overLay.classList.add("overlay");
+    },
+    hideOverLay() {
+      var overLay = document.querySelectorAll(".hsbanner__carousel .active .carousel-caption")[0];
+
+      overLay.classList.remove("overlay");
+    },
     onSlideStart() {
+      this.setAlignText();
       var cSlide = this.getActiveSlide();
       cSlide.children[0].classList.remove("zoom-effect");
       cSlide.children[0].classList.remove("zoom-outeffect");
@@ -52,6 +111,7 @@ var carousel = Vue.component("carousel", {
       }
     },
     onSlideEnd() {
+      this.setAlignText();
       setTimeout(() => {
         this.zoomInOut();
         this.startTiltEffect();

@@ -1,7 +1,4 @@
-
-
-
-const AppLink = Vue.component('app-link', {
+var AppLink = Vue.component('app-link', {
     template: `<a
     v-if="isNewWindow"
     class="app-link"

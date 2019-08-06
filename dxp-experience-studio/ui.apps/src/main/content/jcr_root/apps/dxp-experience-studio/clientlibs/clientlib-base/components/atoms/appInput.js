@@ -1,4 +1,4 @@
-const AppInput = Vue.component("app-input", {
+var AppInput = Vue.component("app-input", {
     name: 'AppInput',
     template: `<input :type="typeText" :class="input_shape" :placeholder="placeholder" :value="textValue">`,
     props: {

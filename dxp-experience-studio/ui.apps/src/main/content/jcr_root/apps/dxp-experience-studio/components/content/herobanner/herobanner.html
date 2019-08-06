@@ -2,9 +2,7 @@
       data-sly-call="${templates.placeholder @ isEmpty = !backgroundimage}">
 </sly>
 <sly data-sly-use.compObj="com.dxp.experience.studio.core.models.ComponentJsonModel" data-sly-unwrap/>
-<div>
-         <banner :dataref ="${compObj.resourceJson}"/>
-
-        </div>
-         
+		<div>
+         <banner :dataref ='${compObj.resourceJson}'/>
+</div>
 </sly>

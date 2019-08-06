@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <logo.82b9c7a5.png/>
+    <asset.jpg/>
+    <play.svg/>
+    <homePageLogo.png/>
+    <left_arrow.svg/>
+    <calendar.svg/>
+    <copyright.png/>
+    <download.png/>
+    <email.svg/>
+    <email_black.svg/>
+    <facebook_black.svg/>
+    <facebook.svg/>
+    <instagram.svg/>
+    <instagram_black.svg/>
+    <linkedin.svg/>
+    <linkedin_black.svg/>
+    <map.svg/>
+    <map-pin.svg/>
+    <next.png/>
+    <next-white.png/>
+    <play.png/>
+    <slider_2.99f0c13e.webp/>
+    <slider_3.6b892c6d.jpeg/>
+    <slider_4.765bd3e5.jpg/>
+    <timer.svg/>
+    <twitter.svg/>
+    <twitter_black.svg/>
+    <union-jack.png/>
+    <slider_1.538aa6f7.gif/>
+    <Zensar-Eon-01.765bd3e5.jpg/>
+    <MIC.svg/>
+    <play-icon.svg/>
+</jcr:root>

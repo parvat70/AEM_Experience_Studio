@@ -1,4 +1,4 @@
-const AppCardTitle = Vue.component('app-card-title', {
+var AppCardTitle = Vue.component('app-card-title', {
     template: `<h1 :class="color + ' card__title'">{{ title }}</h1>`,
     name: "AppCardTitle",
     data() {
@@ -7,7 +7,7 @@ const AppCardTitle = Vue.component('app-card-title', {
     props: {
         title:{
             type: String,
-            default: 'Title'
+            default: ''
         },
         color:{
             type: String,

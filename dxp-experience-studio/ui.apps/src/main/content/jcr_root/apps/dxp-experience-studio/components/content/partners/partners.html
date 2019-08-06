@@ -1,8 +1,7 @@
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-      data-sly-call="${templates.placeholder @ isEmpty = !backgroundImage, classAppend='cmp-carasoul'}">
+      data-sly-call="${templates.placeholder @ isEmpty = !title}">
 </sly>
 <sly data-sly-use.partnersobj="com.dxp.experience.studio.core.models.PartnerModel" data-sly-unwrap>
-
 <div class="pad-top40">
                 <partners :dataref='{
                     title:"${properties.title}",

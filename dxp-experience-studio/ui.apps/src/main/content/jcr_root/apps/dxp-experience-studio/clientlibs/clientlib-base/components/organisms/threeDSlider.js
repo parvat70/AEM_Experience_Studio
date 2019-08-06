@@ -1,6 +1,6 @@
-const threeDSlider = Vue.component('threeDSlider', {
-    template: `<div class="threedslider">
-        <carousel-3d :height="height" :count="dataref.cards.length" :width="width" :display="5" @before-slide-change="onBeforeSlideChange" :perspective="perspective" :inverse-scaling="0" :space="100">
+var threeDSlider = Vue.component('threeDSlider', {
+    template: `<div class="threedslider card_3d_voice">
+        <carousel-3d :height="height" :count="dataref.cards.length" :width="width" :display="display" @before-slide-change="onBeforeSlideChange" :perspective="perspective" :inverse-scaling="0" :space="space">
         <!-- slides -->
         <slide v-for="(card, index) of dataref.cards" :key="'slider'+index" :index="index">
             <div :class="'mycard ' + dataref.variation">
@@ -39,7 +39,13 @@ const threeDSlider = Vue.component('threeDSlider', {
     },
     computed: {
         height() {
-            return (this.dataref.cards.length * 30 / 2) + 535;
+            return window.innerWidth >= 767 ? 660 : 200;
+        },
+        space() {
+            return window.innerWidth >= 767 ? 100 : 40;
+        },
+        display() {
+            return window.innerWidth >= 767 ? 5 : 3;
         }
     },
     methods: {

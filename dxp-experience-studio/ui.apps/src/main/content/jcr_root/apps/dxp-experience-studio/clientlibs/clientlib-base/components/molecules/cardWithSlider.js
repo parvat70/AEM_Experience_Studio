@@ -37,8 +37,8 @@ var cardWithSlider = Vue.component('cardWithSlider', {
     computed: {
         swiperOption() {
             return {
-                slidesPerView: this.dataref.type,
-                spaceBetween: this.dataref.type == 2 ? 50 : 0,
+                slidesPerView: window.innerWidth >= 540 ? this.dataref.type : 2,
+                spaceBetween: window.innerWidth >= 540 ? this.dataref.type == 2 ? 50 : 0 : 15,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true

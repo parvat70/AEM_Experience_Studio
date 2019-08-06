@@ -1,5 +1,6 @@
 #base=css
-app.css
 swiper.min.css
+flickity.min.css
 slick.css
-swiper.min.css
+slick-theme.css
+app.css
