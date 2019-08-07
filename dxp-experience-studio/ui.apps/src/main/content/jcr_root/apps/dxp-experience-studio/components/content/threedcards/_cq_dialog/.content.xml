@@ -78,6 +78,22 @@
                                 jcr:primaryType="nt:unstructured"
                                 text="Card Single Card Solid Bottom Right"
                                 value="card--single card--solid bottom--right"/>
+                            <variation5
+                                cq:lastReplicated="{Date}2019-08-07T09:36:02.017Z"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Single Card Solid Top Right"
+                                value="card--single card--solid top--right"/>
+                            <variation6
+                                cq:lastReplicated="{Date}2019-08-07T09:35:57.961Z"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Single Card Solid Top Left"
+                                value="card--single card--solid top--left"/>
                         </items>
                     </variation>
                 </items>
