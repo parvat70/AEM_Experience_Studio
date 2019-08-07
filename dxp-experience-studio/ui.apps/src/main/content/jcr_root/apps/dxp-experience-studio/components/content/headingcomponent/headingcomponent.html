@@ -2,7 +2,19 @@
       data-sly-call="${templates.placeholder @ isEmpty = !heading}">
 </sly>
 <div class="pad-top40">
-    <sly data-sly-test="${properties.heading != null}">
+<sly data-sly-test="${properties.heading != null}">
             <appcomponentheading title="${properties.heading}"/>
-                <sly>
-        </div>
+                      </div>
+</sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                     'appcomponentheading': appcomponentheading
+                },
+            })
+</script>
+</sly>

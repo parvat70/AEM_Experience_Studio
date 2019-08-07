@@ -3,6 +3,18 @@
 </sly>
 
 <sly data-sly-use.multivideoobj="com.dxp.experience.studio.core.models.MultiVideoModel" data-sly-unwrap/>
-<div class="pad-top40">
+<div>
 <multivideo :dataref="${multivideoobj.multiVideoJsonObject}" />
  </div>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                   'multivideo': multivideo
+                },
+            })
+</script>
+</sly>

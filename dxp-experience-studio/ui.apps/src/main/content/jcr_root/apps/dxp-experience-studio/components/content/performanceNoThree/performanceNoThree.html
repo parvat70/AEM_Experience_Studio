@@ -1,0 +1,23 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !text1 }">
+</sly>
+<sly data-sly-use.numberModelObj="com.dxp.experience.studio.core.models.NumberModel">
+<div>
+            <performancenumberthree :dataref='{
+                        data:${numberModelObj.getNumberJsonObject}
+						}' />
+                        </div>
+
+</sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                   'performancenumberthree': performancenumberthree
+                },
+            })
+</script>
+</sly>

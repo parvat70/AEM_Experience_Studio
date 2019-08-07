@@ -1,7 +1,6 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-unwrap>
 <sly data-sly-call="${clientlib.js @ categories='dxp-experience-studio.base'}" data-sly-unwrap/>
- <sly data-sly-call="${clientlib.js @ categories='dxp-experience-studio.voicecommand'}" /> 
- <sly data-sly-call="${clientlib.js @ categories='cq.authoring.dialog.dxp'}" />  
+ <sly data-sly-call="${clientlib.js @ categories='dxp-experience-studio.voicecommand'}" />  
 </sly>
  <script>
         window.onload = function () {
@@ -16,6 +15,7 @@
                     'app-card': AppCard,
                     'singlevideo': singlevideo,
                     'multivideo': multivideo,
+					'partners':partners,
                     'navigation': navigation,
                     'threed-slider': threeDSlider,
                     'gridvideo': gridvideo,
@@ -25,7 +25,7 @@
                     'team': team,
                     'voice-commands': VoiceCommands,
                     'appcomponentheading': appcomponentheading,
-                     'videowithagenda': videowithagenda
+                    'videowithagenda': videowithagenda
                 },
             })
         }

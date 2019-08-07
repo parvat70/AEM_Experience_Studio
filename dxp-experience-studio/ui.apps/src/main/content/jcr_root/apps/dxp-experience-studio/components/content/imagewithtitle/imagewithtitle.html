@@ -2,10 +2,19 @@
       data-sly-call="${templates.placeholder @ isEmpty = !backgroundimage}">
 </sly>
 <sly data-sly-use.imageJson="com.dxp.experience.studio.core.models.ComponentJsonModel"/>
-
-<div class="pad-top40">
+<div  class="pt-1">
      <staticimage :dataref ="${imageJson.resourceJson}"/>
-
 </div>
-
+</sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                     'staticimage': staticimage
+                },
+            })
+</script>
 </sly>

@@ -12,3 +12,15 @@
     }' />
  </div>
 </sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                   'carousel': carousel
+                },
+            })
+</script>
+</sly>

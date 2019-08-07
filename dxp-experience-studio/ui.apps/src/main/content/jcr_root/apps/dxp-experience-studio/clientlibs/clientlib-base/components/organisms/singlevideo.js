@@ -14,8 +14,9 @@ var singlevideo = Vue.component('singlevideo', {
       width="100%"
       @click="!paused ? playVideoOnClick() : null"
       loop
+    controls
     >
-      <source :src="dataref.src" type="video/mp4" />
+      <source :src="dataref.src + '#t=1'" type="video/mp4" />
     </video>
     <div class="full-video-bg-gradient">
       <div  :class="'caption ' + dataref.textalign">

@@ -5,7 +5,19 @@
 <div class="pad-top40">
             <threed-slider :dataref='{cards:${threedcardobj.threeDCardJson},
                 variation: "${properties.variation}",
-                type:3
+                type:"3"
                 }' />
         </div>
  </sly>
+ <sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                   'threed-slider': threeDSlider
+                },
+            })
+</script>
+</sly>

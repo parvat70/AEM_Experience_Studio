@@ -2,9 +2,9 @@
  <sly data-sly-list.nav= "${sectionObj.navsection.listChildren}">
   <sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">Start Section:${nav.sectionname}</sly>
 <div id="${nav.sectionid}">
-        <div data-sly-resource="${nav.sectionid @ resourceType='wcm/foundation/components/parsys'}"></div><br><br><br>
+        <div data-sly-resource="${nav.sectionid @ resourceType='wcm/foundation/components/parsys'}"></div>
 </div>
-	<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">End Section:${nav.sectionname}<br/></sly>
+	<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">End Section:${nav.sectionname}</sly>
 </sly>
 </sly>
 

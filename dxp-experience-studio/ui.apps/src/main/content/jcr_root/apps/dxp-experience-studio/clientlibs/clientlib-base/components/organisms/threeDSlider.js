@@ -1,5 +1,5 @@
 var threeDSlider = Vue.component('threeDSlider', {
-    template: `<div class="threedslider card_3d_voice">
+    template: `<div :class="'threedslider card_3d_voice ' + dataref.type">
         <carousel-3d :height="height" :count="dataref.cards.length" :width="width" :display="display" @before-slide-change="onBeforeSlideChange" :perspective="perspective" :inverse-scaling="0" :space="space">
         <!-- slides -->
         <slide v-for="(card, index) of dataref.cards" :key="'slider'+index" :index="index">

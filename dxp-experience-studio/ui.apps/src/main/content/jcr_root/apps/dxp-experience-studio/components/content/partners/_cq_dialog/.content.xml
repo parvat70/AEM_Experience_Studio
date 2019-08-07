@@ -59,7 +59,6 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                         fieldDescription="Please Provide Description"
                         fieldLabel="Description"
-                        maxlength="{Long}100"
                         name="./content"/>
                     <backgroundimage
                         jcr:primaryType="nt:unstructured"

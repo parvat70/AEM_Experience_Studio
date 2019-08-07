@@ -34,6 +34,7 @@
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldDescription="Title"
                                             fieldLabel="Card Title"
+                                            maxlength="{Long}40"
                                             name="./title"/>
                                         <image
                                             jcr:primaryType="nt:unstructured"
@@ -47,6 +48,7 @@
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                             fieldDescription="Please Provide Description"
                                             fieldLabel="Card Description"
+                                            maxlength="{Long}200"
                                             name="./description"/>
                                     </items>
                                 </column>

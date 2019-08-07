@@ -59,6 +59,9 @@ var navigation = Vue.component('navigation', {
     window.removeEventListener("scroll", this.handleScroll);
     window.removeEventListener("resize", this.resizeHeader);
   },
+  mounted() {
+    this.highlightNavItem();
+  },
   methods: {
     getImage(img) {
       return img;
@@ -94,6 +97,10 @@ var navigation = Vue.component('navigation', {
         }
       }
 
+      this.highlightNavItem();
+      // End of Sticky navbar code for IE
+    },
+    highlightNavItem() {
       var elem = this.elementsInView();
       if (elem > -1) {
         var topnav = document.querySelector(".topnav");
@@ -111,7 +118,6 @@ var navigation = Vue.component('navigation', {
           }
         }
       }
-      // End of Sticky navbar code for IE
     },
     elementsInView() {
       var elementPosition;

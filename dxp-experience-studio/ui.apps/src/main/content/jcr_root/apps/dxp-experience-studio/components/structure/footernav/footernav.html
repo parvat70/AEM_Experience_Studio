@@ -1,0 +1,25 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+      data-sly-call="${templates.placeholder @ isEmpty = !copyright, classAppend='cmp-carasoul'}">
+</sly>
+<sly data-sly-use.footerDetailsModel="com.dxp.experience.studio.core.models.FooterModel">
+    <div>
+
+      <footercomponent :dataref='{copyright:"${properties.copyright}", 
+                                     footerlogo:"${properties.footerlogo}", 
+			socialicons: ${footerDetailsModel.SocialMediaJsonObject},
+			contactinfo: ${footerDetailsModel.ContactJsonObject} }' />
+
+   </div>
+</sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                     'footercomponent': footercomponent
+                },
+            })
+</script>
+</sly>

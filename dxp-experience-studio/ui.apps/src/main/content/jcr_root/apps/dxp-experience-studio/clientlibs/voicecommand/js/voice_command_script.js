@@ -3,7 +3,7 @@ try {
 
 
     //initialization
-    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    var recognition = new(window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
     recognition.lang = 'en-US';
     recognition.interimResults = false;
     recognition.maxAlternatives = 5;
@@ -17,7 +17,7 @@ try {
     utter.lang = 'en-US';
 
     // event after text has been spoken
-    utter.onend = function () {
+    utter.onend = function() {
         // alert('Speech has finished');
     }
 
@@ -39,7 +39,7 @@ try {
     //This function returns voice command match result
     function searchString(str, searchArray) {
         var obj = { flag: false, item: '' };
-        searchArray.forEach(function (item) {
+        searchArray.forEach(function(item) {
             // if (str.split(' ').indexOf(item) !== -1 && allowListenFlag && obj.flag) {
             //     obj.flag = true;
             //     obj.item = item
@@ -71,7 +71,7 @@ try {
     }
 
 
-    recognition.onresult = function (event) {
+    recognition.onresult = function(event) {
         var voiceMsg = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
         // if (allowListenFlag && !searchString(voiceMsg, CONST.CLARA).flag) {
         listenForVoiceCommands(voiceMsg);
@@ -88,7 +88,7 @@ try {
         console.log(voiceMsg);
     }
 
-    recognition.onerror = function (event) {
+    recognition.onerror = function(event) {
 
         console.log('error', event)
     }
@@ -117,7 +117,7 @@ try {
                 break;
 
             case 'go to':
-                document.querySelectorAll('.navbar_voice #header_voice a').forEach(function (e) {
+                document.querySelectorAll('.navbar_voice #header_voice a').forEach(function(e) {
                     if (voiceMsg.indexOf(e.innerText.toLowerCase()) !== -1) {
                         e.click();
                         match = true;
@@ -125,7 +125,7 @@ try {
                         // console.log(e);
                     }
                 });
-                setTimeout(function () {
+                setTimeout(function() {
                     if (document.getElementById('navigation:hamburger-menu-toggle').className.indexOf('open') !== -1) {
                         document.getElementById('navigation:hamburger-menu-toggle').click();
                     }
@@ -162,7 +162,7 @@ try {
 
     function changeSlide(index) {
         var slider = returnVisibleEleInPageFold(document.querySelectorAll('.banner_carousel_voice')).childNodes[0].childNodes[3].childNodes;
-        slider.forEach(function (e, i) {
+        slider.forEach(function(e, i) {
             if (e.className === 'active' && (i + index) <= (slider.length - 1) && (i + index) >= 0)
 
                 slider[i + index].click()
@@ -173,7 +173,7 @@ try {
     //Return Visible Element in Page Fold
     function returnVisibleEleInPageFold(arr) {
         var ele = null;
-        arr.forEach(function (element) {
+        arr.forEach(function(element) {
             if ((element.offsetTop <= (window.scrollY + window.innerHeight - 200)) &&
                 (element.offsetHeight + element.offsetTop - 200) >= window.scrollY && !ele) {
                 ele = element;
@@ -190,16 +190,16 @@ try {
             returnVisibleEleInPageFold(document.querySelectorAll('.card_3d_voice')).offsetTop :
             Infinity;
         card3d !== Infinity ? sortObj[card3d] = 'card3d' : '';
-        var cardDouble = returnVisibleEleInPageFold(document.querySelectorAll('.card_double_voice')) ?
-            returnVisibleEleInPageFold(document.querySelectorAll('.card_double_voice')).offsetTop :
+        var cardCarousel = returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice')) ?
+            returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice')).offsetTop :
             Infinity;
-        cardDouble !== Infinity ? sortObj[cardDouble] = 'cardDouble' : '';
+        cardCarousel !== Infinity ? sortObj[cardCarousel] = 'cardCarousel' : '';
 
-        var cardTriple = returnVisibleEleInPageFold(document.querySelectorAll('.card_triple_voice')) ?
-            returnVisibleEleInPageFold(document.querySelectorAll('.card_triple_voice')).offsetTop :
-            Infinity;
-        cardTriple !== Infinity ? sortObj[cardTriple] = 'cardTriple' : '';
-        return sortObj[Math.min(card3d, cardDouble, cardTriple)];
+        // var cardTriple = returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice')) ?
+        //     returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice')).offsetTop :
+        //     Infinity;
+        // cardTriple !== Infinity ? sortObj[cardTriple] = 'cardTriple' : '';
+        return sortObj[Math.min(card3d, cardCarousel)];
 
     }
 
@@ -209,30 +209,23 @@ try {
         var firstCardVisible = getFirstCardInPageFold();
         if (returnVisibleEleInPageFold(document.querySelectorAll('.card_3d_voice')) && firstCardVisible === 'card3d') {
             ele = returnVisibleEleInPageFold(document.querySelectorAll('.card_3d_voice'));
-            ele = ele.children[0].children[0].children[1].childNodes;
-            ele.forEach(function (elem, i) {
+            ele = ele.childNodes[0].childNodes[2].childNodes;
+            ele.forEach(function(elem, i) {
                 if (elem.childNodes[0].className.indexOf('active') !== -1 && (i + index) <= (ele.length - 1) && (i + index) >= 0) {
-                    ele[i + index].childNodes[0].click()
+                    ele[i + index].childNodes[0].click();
                 }
             })
-        } else if (returnVisibleEleInPageFold(document.querySelectorAll('.card_triple_voice')) && firstCardVisible === 'cardTriple') {
-            ele = returnVisibleEleInPageFold(document.querySelectorAll('.card_triple_voice'));
-            ele = ele.childNodes[0].childNodes[0].childNodes[0].childNodes[3].childNodes;
-            ele.forEach(function (elem, i) {
-                if (elem.className.indexOf('swiper-pagination-bullet-active') !== -1 && (i + index) <= (ele.length - 1) && (i + index) >= 0) {
-                    ele[i + index].click()
-                }
-            })
-        } else if (returnVisibleEleInPageFold(document.querySelectorAll('.card_double_voice')) && firstCardVisible === 'cardDouble') {
-            ele = returnVisibleEleInPageFold(document.querySelectorAll('.card_double_voice'));
-            ele = ele.childNodes[0].childNodes[0].childNodes[0].childNodes[3].childNodes;
-            ele.forEach(function (elem, i) {
-                if (elem.className.indexOf('swiper-pagination-bullet-active') !== -1 && (i + index) <= (ele.length - 1) && (i + index) >= 0) {
-                    ele[i + index].click()
-                }
-            })
+        } else if (returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice')) && firstCardVisible === 'cardCarousel') {
+            ele = returnVisibleEleInPageFold(document.querySelectorAll('.card_carousel_voice'));
+            ele = ele.childNodes[0].childNodes[0].childNodes[3].childNodes;
+            for (let j = 0; j < ele.length; j++) {
+                let elem = ele[j];
+                if (elem.className.indexOf('swiper-pagination-bullet-active') !== -1 && (j + index) <= (ele.length - 1) && (j + index) >= 0) {
+                    ele[j + index].click();
+                    break;
+                }                
+            }            
         }
-
     }
 
     function isElementVisibleInPageFold(element) {
@@ -247,7 +240,7 @@ try {
     function getMultiVidIndex(ele) {
         var index = 0;
         var ele1 = ele.childNodes[2].childNodes[1].childNodes[0].childNodes
-        ele1.forEach(function (e) {
+        ele1.forEach(function(e) {
             if (e.childNodes[2].childNodes[0].childNodes[0].innerText === ele.childNodes[0].childNodes[6].childNodes[0].innerText)
                 index = e.dataset.slickIndex
         })
@@ -305,8 +298,11 @@ try {
         // var element = ()
     }
 
-    recognition.onend = function () {
-        stopRecording();
+    recognition.onend = function() {
+        if(document.getElementById('micbtn_voice').className.indexOf('active') !== -1){
+            document.getElementById('micbtn_voice').click();
+        }
+        //stopRecording();
     }
 } catch (e) {
     console.log(e);

@@ -18,7 +18,7 @@ var multivideo = Vue.component('multivideo', {
         @click="!paused ? playVideoOnClick() : null"
         loop
       >
-        <source :src="dataref[0].src" type="video/mp4" />
+        <source :src="dataref[0].src + '#t=1'" type="video/mp4" />
       </video>
       <div ref="full-video-bg-gradient-slick" class="full-video-bg-gradient"></div>
       <div ref="caption-slick" :class="'caption ' + dataref[0].textalign" id="caption-slick">
@@ -37,7 +37,7 @@ var multivideo = Vue.component('multivideo', {
       onclick="playInMainVideo(this.getAttribute('data-src'), this.getAttribute('data-title'), this.getAttribute('data-description'))"
       >
         <video class="single-video" :id="'slick-video-thumb-' + index" loop muted>
-          <source :src="item.src + '#t=0,5'" type="video/mp4" />
+          <source :src="item.src + '#t=1'" type="video/mp4" />
         </video>
         <div class="thumb-bg-gradient">
           <div class="thumb-caption">

@@ -1,22 +1,21 @@
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
       data-sly-call="${templates.placeholder @ isEmpty = !heading }">
 </sly>
-
-<sly data-sly-use.teamDetails="com.dxp.experience.studio.core.models.TeamModel">
-<div>
+<sly data-sly-use.teamObj="com.dxp.experience.studio.core.models.TeamModel">
+<div class="pt-1">
             <team :dataref='{
                 heading: "${properties.heading}",
                 description: "${properties.description}",
-                slides :${teamDetails.getTeamJsonObject},
+                slides :${teamObj.getTeamJsonObject},
                 flickityOptions: {
-                    initialIndex: 6,
+                    initialIndex: ${teamObj.getInitialIndexCount},
                     prevNextButtons: false,
                     pageDots: true,
                     wrapAround: true,
                     pauseAutoPlayOnHover: true,
                     selectedAttraction: 0.025,
                     setGallerySize: false,
-                    dragThreshold: 7
+                    dragThreshold: ${teamObj.getTotalItemCount}
                 },
                 carouselPos: 0,
                 activeIndex: 0,
@@ -24,4 +23,16 @@
                 currSlide: "Security"
             }' />
         </div>
+</sly>
+<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}">
+ <script>
+            Vue.use(VueAwesomeSwiper)
+            var app = new Vue({
+                el: '.app',
+                name: "app",
+                components: {
+                   'team': team
+                },
+            })
+</script>
 </sly>

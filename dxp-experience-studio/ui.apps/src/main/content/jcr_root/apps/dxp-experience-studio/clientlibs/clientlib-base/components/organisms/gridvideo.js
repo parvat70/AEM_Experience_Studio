@@ -1,5 +1,5 @@
 var gridvideo = Vue.component('gridvideo', {
-  template: ` <div class="grid-video-container" @click="playVideoOnClick()">
+  template: ` <div :class="'grid-video-container ' + dataref.variation" @click="playVideoOnClick()">
   <div class="video-wrapper">
 <img ref="play-icon-full-video"
   class="play-icon"
