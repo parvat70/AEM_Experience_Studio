@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OrderedFolder">
-    <jcr:content jcr:primaryType="nt:unstructured"/>
+    <jcr:content
+        cq:lastReplicated="{Date}2019-08-08T09:32:55.756Z"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="nt:unstructured"/>
     <logo.82b9c7a5.png/>
     <asset.jpg/>
     <play.svg/>
@@ -34,4 +39,6 @@
     <Zensar-Eon-01.765bd3e5.jpg/>
     <MIC.svg/>
     <play-icon.svg/>
+    <stop-icon.svg/>
+    <favicon.ico/>
 </jcr:root>

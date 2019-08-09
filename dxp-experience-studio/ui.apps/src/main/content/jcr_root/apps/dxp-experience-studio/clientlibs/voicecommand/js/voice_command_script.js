@@ -98,6 +98,7 @@ try {
     }
     //This fuction will execute the voice commands
     function listenForVoiceCommands(voiceMsg) {
+        let mapperObj ={'dss':'dess'};
         console.log('listenForVoiceCommands');
         console.log(searchString(voiceMsg, CONST.VOICE_KEYWORD).item);
         switch (searchString(voiceMsg, CONST.VOICE_KEYWORD).item) {
@@ -109,7 +110,7 @@ try {
                 videoComponentActions(voiceMsg);
                 break;
             case 'scroll up':
-                scrollByPos(-600);
+                scrollByPos(-600);  
                 break;
 
             case 'scroll down':
@@ -118,7 +119,7 @@ try {
 
             case 'go to':
                 document.querySelectorAll('.navbar_voice #header_voice a').forEach(function(e) {
-                    if (voiceMsg.indexOf(e.innerText.toLowerCase()) !== -1) {
+                    if (voiceMsg.indexOf(e.innerText.toLowerCase()) !== -1 ||  e.innerText.toLowerCase().indexOf(mapperObj[voiceMsg.split('go to')[1].trim()]) !== -1) {
                         e.click();
                         match = true;
                         allowListenFlag = true;
@@ -266,23 +267,33 @@ try {
             switch (searchString(voiceMsg, CONST.VOICE_KEYWORD).item) {
                 case 'play':
                     if (multiVidComp.childNodes[0].childNodes[0].style.opacity !== "0")
-                        multiVidComp.childNodes[0].childNodes[0].click()
+                        multiVidComp.childNodes[0].childNodes[0].click();
                     break;
                 case 'pause':
                 case 'stop':
                     if (multiVidComp.childNodes[0].childNodes[0].style.opacity === '0')
-                        multiVidComp.childNodes[0].childNodes[0].click()
+                        multiVidComp.childNodes[0].childNodes[0].click();
                     break;
+                // case 'next':
+                //     if (parseInt(getMultiVidIndex(multiVidComp)) < (multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes.length - 1)) {
+                //         multiVidComp.childNodes[2].childNodes[2].getAttribute('aria-disabled') !== 'false' ? '' : multiVidComp.childNodes[2].childNodes[2].click();
+                //         multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes[parseInt(getMultiVidIndex(multiVidComp)) + 1].click()
+                //     }
+                //     break;
+                // case 'previous':
+                //     if (parseInt(getMultiVidIndex(multiVidComp)) > 0) {
+                //         multiVidComp.childNodes[2].childNodes[0].getAttribute('aria-disabled') !== 'false' ? '' : multiVidComp.childNodes[2].childNodes[0].click();
+                //         multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes[parseInt(getMultiVidIndex(multiVidComp)) - 1].click()
+                //     }
+                //     break;
                 case 'next':
                     if (parseInt(getMultiVidIndex(multiVidComp)) < (multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes.length - 1)) {
-                        multiVidComp.childNodes[2].childNodes[2].getAttribute('aria-disabled') !== 'false' ? '' : multiVidComp.childNodes[2].childNodes[2].click();
-                        multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes[parseInt(getMultiVidIndex(multiVidComp)) + 1].click()
+                        multiVidComp.childNodes[2].childNodes[2].click();
                     }
                     break;
                 case 'previous':
                     if (parseInt(getMultiVidIndex(multiVidComp)) > 0) {
-                        multiVidComp.childNodes[2].childNodes[0].getAttribute('aria-disabled') !== 'false' ? '' : multiVidComp.childNodes[2].childNodes[0].click();
-                        multiVidComp.childNodes[2].childNodes[1].childNodes[0].childNodes[parseInt(getMultiVidIndex(multiVidComp)) - 1].click()
+                        multiVidComp.childNodes[2].childNodes[0].click();
                     }
                     break;
                 default:

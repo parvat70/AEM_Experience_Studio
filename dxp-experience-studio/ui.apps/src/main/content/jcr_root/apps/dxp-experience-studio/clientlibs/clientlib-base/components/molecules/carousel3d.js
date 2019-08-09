@@ -3,7 +3,7 @@ const noop = () => {
 var carousel3d = Vue.component('carousel3d', {
     name: 'carousel3d',
     template: `	<div><div class="carousel-3d-container" :style="{height: this.slideHeight + 'px'}"> 
-		<div class="carousel-3d-slider" :style="{width: this.slideWidth + 'px', height: this.slideHeight + 'px', top: (this.count * 30 / 2)+'px'}">
+		<div class="carousel-3d-slider" :style="{width: this.slideWidth + 'px', height: this.slideHeight + 'px', top: (this.count <= 1 ? '0' :this.count <= 3 ? '70' : '105') +'px'}">
 			<slot></slot>
 		</div>
 		<controls v-if="controlsVisible" :next-html="controlsNextHtml" :prev-html="controlsPrevHtml"

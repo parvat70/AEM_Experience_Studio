@@ -3,7 +3,7 @@
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="7c596b6c-f4b3-475f-9912-8a731476cda0">
+    jcr:uuid="4023e0b7-c482-46d2-8f8a-664f04f393a4">
     <jcr:content
         cq:name="asset.jpg"
         cq:parentPath="/content/dam/dxp-experience-studio"
