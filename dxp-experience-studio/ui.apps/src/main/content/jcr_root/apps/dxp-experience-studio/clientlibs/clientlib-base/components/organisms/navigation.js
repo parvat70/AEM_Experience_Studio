@@ -97,7 +97,8 @@ var navigation = Vue.component('navigation', {
         }
       }
 
-      this.highlightNavItem();
+      setTimeout(()=> {this.highlightNavItem();}, 500);
+            
       // End of Sticky navbar code for IE
     },
     highlightNavItem() {
@@ -134,7 +135,7 @@ var navigation = Vue.component('navigation', {
           elementPosition = element.getBoundingClientRect().top + scrollY + element.clientHeight - 150;
           // console.log(elementPosition);
           // is scroll position greater than element position? (is element in view?)
-          if (scrollPosition > elementPosition) {
+          if ((scrollY <= element.offsetTop) && element.offsetTop < (scrollY + windowHeight/2)) {
             selectedindex = i;
           }
         }

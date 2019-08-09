@@ -1,6 +1,6 @@
 const staticimage = Vue.component("staticimage", {
   template: ` <div>
-    <div class="fpbanner" ref="container" :style="{height:height + 'px'}" @mouseover="showOverLay()" @mouseleave="hideOverLay()" >
+    <div class="fpbanner image__section" ref="container" :style="{height:height + 'px'}" @mouseover="showOverLay()" @mouseleave="hideOverLay()" >
     <div class="imgcontainer">
       <img
         :src="getImage(dataref.backgroundimage)"

@@ -69,6 +69,9 @@ var multivideo = Vue.component('multivideo', {
       variableWidth: true,
       swipeToSlide: true,
     });
+
+    document.querySelector('.slick-next').addEventListener('click', autoPlayOnSlide);
+    document.querySelector('.slick-prev').addEventListener('click', autoPlayOnSlide);
   },
   methods: {
     getImage(img) {
@@ -99,6 +102,11 @@ var multivideo = Vue.component('multivideo', {
     }
   }
 });
+
+function autoPlayOnSlide() {
+  var currentActive = document.querySelector('.slick-current');
+  playInMainVideo(currentActive.getAttribute('data-src'), currentActive.getAttribute('data-title'), currentActive.getAttribute('data-description'));
+}
 
 function playInMainVideo(src, title, description) {
   var video = document.getElementById('full-video-slick');
