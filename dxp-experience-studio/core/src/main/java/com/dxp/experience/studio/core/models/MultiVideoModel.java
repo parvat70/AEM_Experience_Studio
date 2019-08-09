@@ -29,69 +29,71 @@ public class MultiVideoModel {
 	public Resource multivideo;
 
 	String multiVideoJsonObject = null;
-	String src=null;
-	String title=null;
-	String description=null;
-	String textalign=null;
-	
-	
+	String src = null;
+	String title = null;
+	String description = null;
+	String textalign = null;
+
 	@PostConstruct
 	protected void init() throws RepositoryException, JSONException {
 		LOGGER.info("inside post construct" + multivideo);
 		getMultiVideoJsonObject();
 	}
-	
 
-	public String getMultiVideoJsonObject() throws ValueFormatException, PathNotFoundException, RepositoryException, JSONException {
+	public String getMultiVideoJsonObject()
+			throws ValueFormatException, PathNotFoundException, RepositoryException, JSONException {
 
-		
+		if (multivideo != null) {
 
-		Node node = multivideo.adaptTo(Node.class);
-		LOGGER.info("***node value is multivideo ..***" + node.getName());
+			Node node = multivideo.adaptTo(Node.class);
+			LOGGER.info("***node value is multivideo ..***" + node.getName());
 
-		NodeIterator ni = node.getNodes();
-		LOGGER.info("**before while**");
+			NodeIterator ni = node.getNodes();
+			LOGGER.info("**before while**");
 
-	
-		JSONArray array =new JSONArray();
-		
-		while (ni.hasNext()) {
-			//LOGGER.info("****Properties**"+ni.);
-			LOGGER.info("******Node size&&&******"+ni.getSize());
-			
-			Node child = ni.nextNode();
-			LOGGER.info("***child get name***"+child.getName().toString());
-		
-			String src=null;
-			String title=null;
-			String description=null;
-			String textalign=null;
-			
-			src=child.getProperty("src").getValue().toString();
-			title=child.getProperty("title").getValue().toString();
-			description=child.getProperty("description").getValue().toString();
-			textalign=child.getProperty("textalign").getValue().toString();
-			
-			JSONObject VideoObj= new JSONObject();
-			
-			VideoObj.put("src", src);
-			VideoObj.put("title",title);
-			VideoObj.put("description", description);
-			VideoObj.put("textalign", textalign);
-			
-			
-			
-			array.put(VideoObj);
-			
+			if (ni != null) {
+			JSONArray array = new JSONArray();
 
+			while (ni.hasNext()) {
+				// LOGGER.info("****Properties**"+ni.);
+				LOGGER.info("******Node size&&&******" + ni.getSize());
+
+				Node child = ni.nextNode();
+				LOGGER.info("***child get name***" + child.getName().toString());
+
+				String src = null;
+				String title = null;
+				String description = null;
+				String textalign = null;
+				if (child.hasProperty("src") && child.getProperty("src") != null) {
+					src = child.getProperty("src").getValue().toString();
+				}
+				if (child.hasProperty("title") && child.getProperty("title") != null) {
+					title = child.getProperty("title").getValue().toString();
+				}
+				if (child.hasProperty("description") && child.getProperty("description") != null) {
+					description = child.getProperty("description").getValue().toString();
+				}
+				if (child.hasProperty("textalign") && child.getProperty("textalign") != null) {
+					textalign = child.getProperty("textalign").getValue().toString();
+				}
+
+				JSONObject VideoObj = new JSONObject();
+
+				VideoObj.put("src", src);
+				VideoObj.put("title", title);
+				VideoObj.put("description", description);
+				VideoObj.put("textalign", textalign);
+
+				array.put(VideoObj);
+
+			}
+			LOGGER.info("final Array" + array.toString());
+			multiVideoJsonObject = array.toString();
+			return multiVideoJsonObject;
 		}
-		LOGGER.info("final Array"+array.toString());
-		multiVideoJsonObject=array.toString();	
-		return multiVideoJsonObject;
+		return "[{}]";
+		}
+		return "[{}]";
 	}
-
-	
-	}
-
-
-
+}

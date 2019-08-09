@@ -1,4 +1,5 @@
 package com.dxp.experience.studio.core.models;
+
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.jcr.Node;
@@ -21,47 +22,49 @@ public class PartnerModel {
 	@Inject
 	@Optional
 	public Resource partners;
-	
-	String partnersJsonObj=null;
-	
-	
+
+	String partnersJsonObj = null;
+
 	@PostConstruct
-	protected void init() throws RepositoryException, JSONException{
+	protected void init() throws RepositoryException, JSONException {
 		LOGGER.info("inside post construct card ");
 		getPartnerJsonObject();
 	}
-	
+
 	public String getPartnerJsonObject() throws RepositoryException, JSONException {
-		
-		Node partnernode = partners.adaptTo(Node.class);
-		LOGGER.info("node value for cards .." + partnernode.getName());
+		if (partners != null) {
+			Node partnernode = partners.adaptTo(Node.class);
+			LOGGER.info("node value for cards .." + partnernode.getName());
 
-		NodeIterator ni = partnernode.getNodes();
-		LOGGER.info("**While Start**");
+			NodeIterator ni = partnernode.getNodes();
+			LOGGER.info("**While Start**");
+			if (ni != null) {
+				JSONArray array = new JSONArray();
+				while (ni.hasNext()) {
+					Node child = ni.nextNode();
 
-		JSONArray array =new JSONArray();
-		while (ni.hasNext()) {
-			Node child = ni.nextNode();
-			
-			String name=null;
-			String image=null;
-				
-			name=child.getProperty("name").getValue().toString();
-			image=child.getProperty("image").getValue().toString();
-				
-				JSONObject partnerObj= new JSONObject();
-				partnerObj.put("name", name);
-			    partnerObj.put("image", image);
-				array.put(partnerObj);
-				
+					String name = null;
+					String image = null;
+					if (child.hasProperty("name") && child.getProperty("name") != null) {
+						name = child.getProperty("name").getValue().toString();
+					}
+					if (child.hasProperty("image") && child.getProperty("image") != null) {
+						image = child.getProperty("image").getValue().toString();
+					}
+					JSONObject partnerObj = new JSONObject();
+					partnerObj.put("name", name);
+					partnerObj.put("image", image);
+					array.put(partnerObj);
 
+				}
+
+				partnersJsonObj = array.toString();
+				LOGGER.info("partnersJsonObj>>>>>>>>>>>" + partnersJsonObj);
+				return partnersJsonObj;
+
+			}
+			return "[{}]";
 		}
-		
-		partnersJsonObj=array.toString();
-		LOGGER.info("partnersJsonObj>>>>>>>>>>>"+partnersJsonObj);
-		return partnersJsonObj;
-		
+		return "[{}]";
 	}
 }
-
-

@@ -6,7 +6,9 @@ import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONException;
+import org.apache.sling.commons.json.JSONObject;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 import org.slf4j.Logger;
@@ -19,52 +21,58 @@ public class CarouselModel {
 	@Inject
 	@Optional
 	public Resource imagecarousel;
-	
 
-	String carouseljsonObject = null;
-	
-	
+	String carouseljsonObject = "";
 
-	public String getCarouseljsonObject() {
-		return carouseljsonObject;
-	}
-
-	@PostConstruct
+	/*@PostConstruct
 	protected void init() throws RepositoryException, JSONException {
+		LOGGER.info("inside post construct card ");
+		getCarouseljsonObject();
+		LOGGER.info("again inside post construct card ");
+		getCarouseljsonObject();
+	}*/
 
-		LOGGER.info("inside post construct" + imagecarousel);
+	public String getCarouseljsonObject() throws RepositoryException, JSONException {
 
-		Node node = imagecarousel.adaptTo(Node.class);
-		LOGGER.info("node value is .." + node.getName());
+		if (imagecarousel != null) {
+		Node cardnode = imagecarousel.adaptTo(Node.class);
+		LOGGER.info("node value for cards .." + cardnode.getName());
 
-		NodeIterator ni = node.getNodes();
+		NodeIterator ni = cardnode.getNodes();
 		LOGGER.info("**While Start**");
 
-		StringBuilder carouselImagePath = new StringBuilder();
-		
+		if(ni!=null) {
+		JSONArray array = new JSONArray();
 		while (ni.hasNext()) {
-			//LOGGER.info("****Properties**"+ni.);
-
 			Node child = ni.nextNode();
 
-			if (child.hasProperty("sliders")) {
-
-				String imagePath = child.getProperty("sliders").getValue().toString();
-				carouselImagePath.append("\""+imagePath+"\",");
-				
+			String src = null;
+			String headertext = null;
+			String subheadertext = null;
+			if (child.hasProperty("src") && child.getProperty("src") != null) {
+				src = child.getProperty("src").getValue().toString();
 			}
-			
+			if (child.hasProperty("headertext") && child.getProperty("headertext") != null) {
+				headertext = child.getProperty("headertext").getValue().toString();
+			}
+			if (child.hasProperty("subheadertext") && child.getProperty("subheadertext") != null) {
+				subheadertext = child.getProperty("subheadertext").getValue().toString();
+			}
+			JSONObject CarouselObj = new JSONObject();
+			CarouselObj.put("src", src);
+			CarouselObj.put("headertext", headertext);
+			CarouselObj.put("subheadertext", subheadertext);
+			array.put(CarouselObj);
 
 		}
-		//String paths = carouselImagePath.toString().replace(carouselImagePath.substring(carouselImagePath.length()-1), "");
-		LOGGER.info("imagePath"+carouselImagePath);
-		
-		
-		this.carouseljsonObject=carouselImagePath.toString();
+		LOGGER.info("final Card Array" + array.toString());
+		carouseljsonObject = array.toString();
+		LOGGER.info("carouseljsonObject----------" + carouseljsonObject);
+		return carouseljsonObject;
+		}
+		return "[{}]";
 
-		LOGGER.info("**Final Array JSON **  : " + carouselImagePath);
-
-		
 	}
-
+		return "[{}]";
+	}
 }
